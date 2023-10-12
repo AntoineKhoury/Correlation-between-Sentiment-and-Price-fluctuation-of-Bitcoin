@@ -1,44 +1,43 @@
-# Correlation-between-Sentiment-and-Price-fluctuation-of-Bitcoin
-This group project aimed to see if we could observe a form of correlation between sentiment analysis computed scores and the fluctuation of bitcoin.
+# Correlation between Sentiment and Price Fluctuation of Bitcoin
 
-Because of the size of our models and datasets, we didn’t include all the content in the zip file.
-To run the different parts of this project, you should download the content of the project’s google drive:
-https://drive.google.com/drive/folders/1brblSRUy-tGW83oCjk6CW75gtb4agHpK?usp=sharing
-The different parts have been split so you can download the necessary part when running some parts of the project (eg. you need to download “pre-training_and_fine-tuning_bertweet/best_bertweet.pt” to use it to predict sentiment in “bertweet_demo.ipynb”)
-Organization of the entire folder
-This folder contains all the resources required to reproduce the results mentioned in the report:
+In this group project, our objective was to analyze if there exists a correlation between sentiment scores, derived from sentiment analysis, and Bitcoin's price fluctuations.
 
-●	the folder “bertweet-retrained” contains the re-trained model version of Bertweet on crypto-tweets.
+> **Note**: Due to the large size of our models and datasets, we have excluded some content from the zip file.
 
-●	the folder “tweet_datasets” contains all the tweet datasets required to reproduce our results
+## Getting Started
 
-●	the folder “final_presentation” contains the presentation required as part of the submission
+To access and run different segments of this project, download the content from our Google Drive:
 
-●	the folder “fine-tuning_roberta” contains the notebook to fine-tune roberta
+🔗 [Google Drive Project Folder](https://drive.google.com/drive/folders/1brblSRUy-tGW83oCjk6CW75gtb4agHpK?usp=sharing)
 
-●	the folder “pre-training_and_fine-tuning_bertweet” contains the notebook to pre-train Bertweet, the data used in pre-training and the notebook to fine-tune it
+We've modularized the content, ensuring you only download what's necessary. For instance, to run the sentiment predictions in `bertweet_demo.ipynb`, you'd need to download `pre-training_and_fine-tuning_bertweet/best_bertweet.pt`.
 
-●	the folder “task1” contains the necessary resources to predict the sentiment of manually labelled tweets for both Bertweet and Roberta
+## Project Structure
 
-●	the folder “task2” contains the notebooks to predict the sentiment over periods of time to compute the causality with financial data
+Here's a brief on the organization of the entire folder:
 
-●	the “price” folder contains any financial data used in task 2 to compute the causality with sentiment
+- 📁 `bertweet-retrained`: Contains the re-trained Bertweet model on crypto-tweets.
+- 📁 `tweet_datasets`: Houses all tweet datasets used in our analysis.
+- 📁 `final_presentation`: Contains the presentation for project submission.
+- 📁 `fine-tuning_roberta`: Includes the notebook to fine-tune RoBERTa.
+- 📁 `pre-training_and_fine-tuning_bertweet`: Contains notebooks and data for pre-training and fine-tuning Bertweet.
+- 📁 `task1`: Resources to predict the sentiment of manually labeled tweets for both Bertweet and RoBERTa.
+- 📁 `task2`: Notebooks to predict sentiment over time and analyze its causality with financial data.
+- 📁 `price`: Contains financial data used in Task 2.
+- 📓 `NLP Group 5 Project (2022).ipynb`: The primary notebook for reproducing our results.
+- 📓 `roberta_demo.ipynb`: A demo to predict sentiment using the fine-tuned RoBERTa model.
+- 📓 `bertweet_demo.ipynb`: A demo to predict sentiment using the fine-tuned Bertweet model.
 
-●	the file “NLP Group 5 Project (2022).ipynb” is the main notebook to run when trying to reproduce the results
+## Instructions
 
-●	the file “roberta_demo.ipynb” is a demo notebook to predict the sentiment of some manually inputted tweets using the Roberta fine-tuned model
-
-●	the file “bertweet_demo.ipynb” is a demo notebook to predict the sentiment of some manually inputted tweets using the Bertweet fine-tuned model
-
-Instruction
-Please follow below instructions to ensure smooth running of all the notebooks
-●	Unzip the zipped file and upload the folder at your My Drive directory in Google Drive
-
-Demo
-1.	Please ensure you have turned on GPU runtime to try out the sentiment models
-2.	Demo Files can be found here
-a.	BerTweet – bertweet_demo.ipynb
-b.	RoBerta – Roberta_demo.ipynb
-3.	The demo functions can be found the end of each notebook and the function takes a list argument so an example input will be [“I love bitcoin HODL”, “Why is Elon Musk dissing BTC”] and this will output probabilities and predictions for each tweet.
-
-
+1. **Setup**: Extract the zipped file and upload the entire folder to the "My Drive" directory in your Google Drive.
+2. **Demos**:
+    - Ensure GPU runtime is enabled for optimal model performance.
+    - Access the demo notebooks:
+      - **BerTweet**: `bertweet_demo.ipynb`
+      - **RoBERTa**: `roberta_demo.ipynb`
+    - Use the demo functions at the end of each notebook. These functions accept a list of tweets. For example:
+      ```python
+      ["I love bitcoin HODL", "Why is Elon Musk dissing BTC"]
+      ```
+      This will output sentiment probabilities and predictions for each tweet.
